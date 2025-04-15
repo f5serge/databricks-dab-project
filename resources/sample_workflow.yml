@@ -8,7 +8,7 @@ resources:
       tasks:
         - task_key: sample_notebook_task
           # job_cluster_key: shared_job_cluster
-          existing_cluster_id: ${var.CLUSTER_ID}
+          existing_cluster_id: ${var.cluster_id}
           notebook_task:
             notebook_path: ${workspace.file_path}/notebooks/bronze/sample_notebook
             base_parameters:

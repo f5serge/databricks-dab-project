@@ -8,6 +8,8 @@ variables:
   python_package_version:
     description: The version of the common Python package
     default: "0.1.0"
+  cluster_id:
+    description: The Databricks cluster ID
 
 artifacts:
   common_package:
@@ -18,13 +20,11 @@ targets:
   dev:
     mode: development
     default: true
-    workspace:
-      host: ${DATABRICKS_HOST}
     
   prod:
     mode: production
     workspace:
-      host: ${DATABRICKS_HOST}
+      # host: your-workspace.databricks.com
       root_path: /Shared/.bundle/prod/${bundle.name}
     run_as:
       user_name: ${workspace.current_user.userName} 
