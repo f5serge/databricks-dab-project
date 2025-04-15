@@ -18,7 +18,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install databricks-cli
+        pip install databricks-sdk
+        pip install databricks-cli --upgrade
     - name: Validate bundle
       run: |
+        databricks --version
         databricks bundle validate
