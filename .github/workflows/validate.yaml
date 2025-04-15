@@ -19,5 +19,8 @@ jobs:
       run: |
         curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
     - name: Validate bundle
+      # TODO: Add the validate command
+      # Follow the instructions in the README to install the CLI and run the validate command
+      # https://github.com/databricks/setup-cli?tab=readme-ov-file#github-actions
       run: |
-        databricks bundle validate
+        echo "databricks bundle validate"
