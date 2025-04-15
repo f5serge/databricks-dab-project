@@ -1,0 +1,31 @@
+resources:
+  jobs:
+    sample_job:
+      name: ${bundle.name}-sample-job
+      email_notifications:
+        on_failure:
+          - ${workspace.current_user.userName}
+      tasks:
+        - task_key: sample_notebook_task
+          # job_cluster_key: shared_job_cluster
+          existing_cluster_id: ${var.CLUSTER_ID}
+          notebook_task:
+            notebook_path: ${workspace.file_path}/notebooks/bronze/sample_notebook
+            base_parameters:
+              env: ${bundle.target}
+          libraries:
+            - whl: ${workspace.artifact_path}/.internal/common_package-${var.python_package_version}-py3-none-any.whl
+      # job_clusters:
+      #   - job_cluster_key: shared_job_cluster
+      #     new_cluster:
+      #       spark_version: 15.4.x-scala2.12
+      #       node_type_id: Standard_D3_v2
+      #       num_workers: 1
+      #       spark_conf:
+      #         spark.databricks.delta.preview.enabled: "true"
+      #         spark.databricks.cluster.profile: singleNode
+      #         spark.master: local[*]
+      #       custom_tags:
+      #         ResourceClass: SingleNode
+      #       spark_env_vars:
+      #         PYSPARK_PYTHON: /databricks/python3/bin/python3 
