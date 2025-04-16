@@ -10,18 +10,16 @@ databricks-dab-project/
 ├── resources/               # DAB resources (workflows, etc.)
 │   └── sample_workflow.yml  # Sample workflow definition
 ├── src/                     # Source code
-│   ├── common/              # Common code shared across notebooks
-│   │   └── python_base_package/  # Reusable Python package
-│   │       ├── setup.py          # Package setup file
-│   │       └── common/   # Package source code
-│   │           ├── __init__.py
-│   │           ├── utils/        # Utility modules
-│   │           ├── transforms/   # Data transformation modules
-│   │           └── ingestion/    # Data ingestion modules
-│   └── notebooks/           # Databricks notebooks
-│       ├── bronze/          # Bronze layer notebooks
-│       ├── silver/          # Silver layer notebooks
-│       └── gold/            # Gold layer notebooks
+│   ├── common/              # Reusable Python package shared across notebooks
+│   │   ├── __init__.py
+│   │   ├── utils/           # Utility modules
+│   │   ├── transforms/      # Data transformation modules
+│   │   └── ingestion/       # Data ingestion modules
+│   └── setup.py             # Package setup file
+├── notebooks/               # Databricks notebooks
+│   ├── bronze/              # Bronze layer notebooks
+│   ├── silver/              # Silver layer notebooks
+│   └── gold/                # Gold layer notebooks
 └── docs/                    # Documentation
 ```
 
@@ -29,12 +27,13 @@ databricks-dab-project/
 
 1. Install the Databricks CLI v2
 
+Follow the instructions in the [Databricks CLI documentation](https://docs.databricks.com/aws/en/dev-tools/cli/install)
+
 ```bash
-# Using pip
-pip install databricks-cli
+curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
 
 # Verify installation
-databricks --version
+databricks version
 ```
 
 2. Configure Databricks CLI

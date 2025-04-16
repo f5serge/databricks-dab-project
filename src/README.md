@@ -9,7 +9,7 @@ common/
 ├── __init__.py
 ├── utils/              # Utility modules
 │   ├── __init__.py
-│   └── logging_utils.py
+│   └── logging.py
 ├── transforms/         # Data transformation modules
 │   └── __init__.py
 └── ingestion/          # Data ingestion modules

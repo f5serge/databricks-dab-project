@@ -14,7 +14,7 @@ variables:
 artifacts:
   common:
     type: whl
-    path: src/common/python_base_package
+    path: src
 
 targets:
   dev:

@@ -57,7 +57,7 @@ DAB provides a way to:
 
 1. Navigate to the Python package directory:
    ```bash
-   cd src/common/python_base_package
+   cd src
    ```
 
 2. Create a virtual environment:
