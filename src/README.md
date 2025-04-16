@@ -100,4 +100,4 @@ This will create a wheel file in the `dist/` directory.
 
 ## License
 
-For internal use only. 
+For internal use only.

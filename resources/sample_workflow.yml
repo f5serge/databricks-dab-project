@@ -28,4 +28,4 @@ resources:
       #       custom_tags:
       #         ResourceClass: SingleNode
       #       spark_env_vars:
-      #         PYSPARK_PYTHON: /databricks/python3/bin/python3 
+      #         PYSPARK_PYTHON: /databricks/python3/bin/python3

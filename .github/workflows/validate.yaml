@@ -1,5 +1,5 @@
 name: Validate DAB Project
-     
+
 on:
   push:
     branches: [ main ]

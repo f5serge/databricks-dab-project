@@ -224,4 +224,4 @@ databricks bundle deploy --target test
 
 - [Databricks CLI Documentation](https://docs.databricks.com/dev-tools/cli/index.html)
 - [Databricks Asset Bundles Documentation](https://docs.databricks.com/dev-tools/bundles/index.html)
-- [Databricks Connect](https://docs.databricks.com/dev-tools/databricks-connect.html) 
+- [Databricks Connect](https://docs.databricks.com/dev-tools/databricks-connect.html)

@@ -55,8 +55,23 @@ python -m venv .venv
 source .venv/bin/activate
 
 # Install development requirements
-cd src/common/python_base_package
+cd src
 pip install -e .
+```
+
+4. Configure pre-commit hooks
+
+This project uses pre-commit hooks to enforce code quality and check for secrets before commits.
+
+```bash
+# Install pre-commit
+pip install pre-commit
+
+# Install the pre-commit hooks
+pre-commit install
+
+# Run the hooks against all files
+pre-commit run --all-files
 ```
 
 ## Building and Deploying the Package
@@ -103,4 +118,4 @@ databricks bundle run sample_job
 
 If you encounter issues with the package, check the logs in the Databricks workspace or try running individual notebooks for debugging.
 
-For CLI issues, use `databricks bundle validate` to check your configuration files. 
+For CLI issues, use `databricks bundle validate` to check your configuration files.

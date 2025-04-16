@@ -20,11 +20,15 @@ targets:
   dev:
     mode: development
     default: true
-    
+    workspace:
+      # host: your-workspace.databricks.com
+      root_path: /Shared/.bundle/dev/${bundle.name}
+    run_as:
+      user_name: ${workspace.current_user.userName}
   prod:
     mode: production
     workspace:
       # host: your-workspace.databricks.com
       root_path: /Shared/.bundle/prod/${bundle.name}
     run_as:
-      user_name: ${workspace.current_user.userName} 
+      user_name: ${workspace.current_user.userName}
