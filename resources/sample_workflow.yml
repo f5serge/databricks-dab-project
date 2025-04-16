@@ -14,7 +14,7 @@ resources:
             base_parameters:
               env: ${bundle.target}
           libraries:
-            - whl: ${workspace.artifact_path}/.internal/common_package-${var.python_package_version}-py3-none-any.whl
+            - whl: ${workspace.artifact_path}/.internal/common-${var.python_package_version}-py3-none-any.whl
       # job_clusters:
       #   - job_cluster_key: shared_job_cluster
       #     new_cluster:

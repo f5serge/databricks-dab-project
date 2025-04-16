@@ -5,7 +5,7 @@ This Python package provides common utilities, transformations, and ingestion mo
 ## Package Structure
 
 ```
-common_package/
+common/
 ├── __init__.py
 ├── utils/              # Utility modules
 │   ├── __init__.py
@@ -32,17 +32,17 @@ pip install -e .
 Import and use the package modules in your Databricks notebooks:
 
 ```python
-from common_package.utils.logging_utils import log_info, log_error
+from common.utils.logging import info, error
 
 # Log information
-log_info("Processing started")
+info("Processing started")
 
 # Log errors
 try:
     # Your processing code
     pass
 except Exception as e:
-    log_error(f"Error during processing: {str(e)}")
+    error(f"Error during processing: {str(e)}")
     raise
 ```
 
@@ -54,12 +54,12 @@ For local development and testing, you can use the package the same way after in
 
 ### Utils
 
-#### logging_utils
+#### logging
 
 Provides standardized logging functions that work both in Databricks and local environments:
 
-- `log_info(message, extra=None)`: Log an informational message
-- `log_error(message, extra=None)`: Log an error message
+- `info(message, extra=None)`: Log an informational message
+- `error(message, extra=None)`: Log an error message
 
 ### Adding New Modules
 

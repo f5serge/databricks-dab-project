@@ -10,7 +10,7 @@ except:
     pass
 
 setup(
-    name="common_package",
+    name="common",
     version=version,
     description="Common utilities for Databricks DAB project",
     author="Data Engineering Team",

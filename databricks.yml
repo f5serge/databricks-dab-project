@@ -12,7 +12,7 @@ variables:
     description: The Databricks cluster ID
 
 artifacts:
-  common_package:
+  common:
     type: whl
     path: src/common/python_base_package
 

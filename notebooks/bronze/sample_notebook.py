@@ -11,7 +11,7 @@ import sys
 from datetime import datetime
 
 # Import from the common Python package
-from common_package.utils.logging_utils import log_info, log_error
+from common.utils.logging import info, error
 
 # COMMAND ----------
 
@@ -36,7 +36,7 @@ def main():
     Main execution function.
     """
     try:
-        log_info(f"Starting sample notebook in {env} environment")
+        info(f"Starting sample notebook in {env} environment")
         
         # Your bronze layer data processing code here
         
@@ -52,10 +52,10 @@ def main():
         df_filtered = df.filter(df.age > 25)
         display(df_filtered)
         
-        log_info("Sample notebook execution completed successfully")
+        info("Sample notebook execution completed successfully")
         
     except Exception as e:
-        log_error(f"Error in sample notebook: {str(e)}")
+        error(f"Error in sample notebook: {str(e)}")
         raise
 
 # COMMAND ----------

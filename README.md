@@ -13,7 +13,7 @@ databricks-dab-project/
 │   ├── common/              # Common code shared across notebooks
 │   │   └── python_base_package/  # Reusable Python package
 │   │       ├── setup.py          # Package setup file
-│   │       └── common_package/   # Package source code
+│   │       └── common/   # Package source code
 │   │           ├── __init__.py
 │   │           ├── utils/        # Utility modules
 │   │           ├── transforms/   # Data transformation modules

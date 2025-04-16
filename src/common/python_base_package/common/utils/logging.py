@@ -26,7 +26,7 @@ def _get_logger() -> logging.Logger:
     return logger
 
 
-def log_info(message: str, extra: Optional[Dict[str, Any]] = None) -> None:
+def info(message: str, extra: Optional[Dict[str, Any]] = None) -> None:
     """
     Log an info-level message.
     
@@ -52,7 +52,7 @@ def log_info(message: str, extra: Optional[Dict[str, Any]] = None) -> None:
         logger.info(message, extra=extra or {})
 
 
-def log_error(message: str, extra: Optional[Dict[str, Any]] = None) -> None:
+def error(message: str, extra: Optional[Dict[str, Any]] = None) -> None:
     """
     Log an error-level message.
     
